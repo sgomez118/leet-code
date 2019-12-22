@@ -1,9 +1,9 @@
-package com.scotty.leetcode;
+package com.scottygomez.leetcode;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class Main {
+public class TwoSums {
     public static void main(String[] args) {
         // From the example
         int[] nums = { 2, 7, 11, 15 };
