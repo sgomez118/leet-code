@@ -2,9 +2,16 @@
     "configurations": [
         {
             "type": "java",
-            "name": "CodeLens (Launch) - Main",
+            "name": "CodeLens (Launch) - AddTwoNumbers",
             "request": "launch",
-            "mainClass": "com.scotty.leetcode.Main"
+            "mainClass": "com.scottygomez.leetcode.AddTwoNumbers"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - TwoSums",
+            "request": "launch",
+            "mainClass": "com.scottygomez.leetcode.TwoSums",
+            "projectName": "two-sums"
         }
     ]
 }
