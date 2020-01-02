@@ -46,7 +46,7 @@ char[] queue = new char[words.length]
 for character in word
     if character in queue
         dequeue(character)
-    queue(character)
+    enqueue(character)
     if maxLength < count(queue)
         maxLength = count(queue)
 

@@ -2,6 +2,12 @@
     "configurations": [
         {
             "type": "java",
+            "name": "CodeLens (Launch) - LongestSubstringWithoutRepeatingCharacters",
+            "request": "launch",
+            "mainClass": "main.java.com.scottygomez.leetcode.LongestSubstringWithoutRepeatingCharacters"
+        },
+        {
+            "type": "java",
             "name": "CodeLens (Launch) - AddTwoNumbers",
             "request": "launch",
             "mainClass": "com.scottygomez.leetcode.AddTwoNumbers"
