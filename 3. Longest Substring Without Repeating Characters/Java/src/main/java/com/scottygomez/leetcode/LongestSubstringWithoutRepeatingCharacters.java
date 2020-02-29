@@ -1,4 +1,4 @@
-package main.java.com.scottygomez.leetcode;
+package com.scottygomez.leetcode;
 
 /**
  * LongestSubstringWithoutRepeatingCharacters
