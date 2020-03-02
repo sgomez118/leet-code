@@ -30,9 +30,9 @@ From there its just a standard binary search algorithm where largest element on 
 ### Pseudo Code
 I'm putting up the binary search from Wikipedia for comparison.
 
-A is the array
-n is the number of elements in the array
-T is the target element to find
+* A is the array
+* n is the number of elements in the array
+* T is the target element to find
 ```
 function binary_search(A, n, T) is
     L := 0
@@ -47,20 +47,22 @@ function binary_search(A, n, T) is
             return m
     return unsuccessful
 ```
-A is the first array
-m is the length of the first array
-B is the second array
-n is the length of the second array
+* A is the first array
+* m is the length of the first array
+* B is the second array
+* n is the length of the second array
 ```
 function medianOfSortedArrays(A, m, B, n):
     L := 0
     R := m
-    while L < R:
+    while L ≤ R:
         p := floor((L + R) / 2)
         p2 := floor((m + n + 1) / 2) - p
-        if A[p-1] > B[p2]:
-            L := p - 1
+        if A[p-1] ≤ B[p2] AND B[p2-1] ≤ A[p]
+            break
+        else if A[p] < B[p2-1]:
+            L := p + 1
         else:
-            R := p + 1
+            R := p - 1
     return (m + n) % 2 == 0 ? avg(max(A[p-1], B[p2-1]), min(A[p], B[p2])) : max(A[p-1], B[p2-1])
 ```
