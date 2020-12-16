@@ -2,6 +2,12 @@
     "configurations": [
         {
             "type": "java",
+            "name": "CodeLens (Launch) - LongestPalindromicSubstring",
+            "request": "launch",
+            "mainClass": "com.scottygomez.leetcode.LongestPalindromicSubstring"
+        },
+        {
+            "type": "java",
             "name": "CodeLens (Launch) - MedianOfTwoSortedArrays",
             "request": "launch",
             "mainClass": "com.scottygomez.leetcode.MedianOfTwoSortedArrays",
