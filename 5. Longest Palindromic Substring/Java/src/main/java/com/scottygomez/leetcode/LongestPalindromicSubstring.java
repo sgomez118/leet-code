@@ -9,13 +9,13 @@ public class LongestPalindromicSubstring {
     }
 
     public static String longestPalindromicSubstring(String word) {
-        String longestPalindrome = word;
-
         int left = 0;
-        int right = word.length() - 1;
-
-        while (!isPalindrome(word)) {
-            left += 1;
+        int right = word.length();
+        
+        String longestPalindrome = word.substring(left, right);
+        
+        while (!isPalindrome(longestPalindrome)) {
+            // left += 1;
             right -= 1;
             
             longestPalindrome = longestPalindrome.substring(left, right);
