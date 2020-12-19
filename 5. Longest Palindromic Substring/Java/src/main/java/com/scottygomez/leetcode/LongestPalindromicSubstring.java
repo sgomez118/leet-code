@@ -1,5 +1,8 @@
 package com.scottygomez.leetcode;
 
+import java.util.HashMap;
+import java.util.Map;
+
 /**
  * Longest Palindromic Substring
  */
@@ -9,18 +12,25 @@ public class LongestPalindromicSubstring {
     }
 
     public static String longestPalindromicSubstring(String word) {
-        int left = 0;
-        int right = word.length();
-        
-        String longestPalindrome = word.substring(left, right);
-        
-        while (!isPalindrome(longestPalindrome)) {
-            // left += 1;
-            right -= 1;
+        String longestPalindrome = null;
+
+        for (int i = 0; i < word.length(); i++) {
+            int left = 0;
+            int right = word.length() - i;
             
-            longestPalindrome = longestPalindrome.substring(left, right);
+            String palindrome = word.substring(left, right);
+            while (right < word.length() && !isPalindrome(palindrome)) {
+                left += 1;
+                right += 1;
+                palindrome = word.substring(left, right);
+            }
+
+            if (isPalindrome(palindrome)) {
+                longestPalindrome = palindrome;
+                break;
+            }
         }
-        
+
         return longestPalindrome;
     }
 
