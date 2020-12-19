@@ -1,8 +1,5 @@
 package com.scottygomez.leetcode;
 
-import java.util.HashMap;
-import java.util.Map;
-
 /**
  * Longest Palindromic Substring
  */
