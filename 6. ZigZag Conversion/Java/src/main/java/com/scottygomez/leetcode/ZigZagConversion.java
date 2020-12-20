@@ -20,19 +20,23 @@ public class ZigZagConversion {
             // Make sure index is not beyond the word index
             if (index < word.length()) {
                 // Start iterating through columns
-                int currentColumnNumber = 1;
-                while (index < word.length()) {
-                    
-                    if (currentRowNumber > 0) {
-                        stringBuilder.append(word.charAt(index - currentColumnNumber));
-                        stringBuilder.append(word.charAt(index + currentRowNumber));
+                int currentColumnNumber = 0;
+                
+                do {
+                    if (currentRowNumber > 0 && index > numberOfColumns + numberOfColumns) {
+                        if (index - currentRowNumber < word.length()) {
+                            stringBuilder.append(word.charAt(index - currentRowNumber));
+                        }
+                        if (index + currentRowNumber < word.length()) {
+                            stringBuilder.append(word.charAt(index + currentRowNumber));
+                        }
                     } else {
                         stringBuilder.append(word.charAt(index));
                     }
-
-                    index = (numberOfRows + numberOfColumns) * currentColumnNumber - currentRowNumber;
+                    
                     currentColumnNumber++;
-                }
+                    index = (numberOfRows + numberOfColumns) * currentColumnNumber;
+                } while (index < word.length());
             }
         }
 
