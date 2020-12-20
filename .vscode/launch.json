@@ -2,6 +2,12 @@
     "configurations": [
         {
             "type": "java",
+            "name": "CodeLens (Launch) - ZigZagConversion",
+            "request": "launch",
+            "mainClass": "com.scottygomez.leetcode.ZigZagConversion"
+        },
+        {
+            "type": "java",
             "name": "CodeLens (Launch) - LongestPalindromicSubstring",
             "request": "launch",
             "mainClass": "com.scottygomez.leetcode.LongestPalindromicSubstring"
