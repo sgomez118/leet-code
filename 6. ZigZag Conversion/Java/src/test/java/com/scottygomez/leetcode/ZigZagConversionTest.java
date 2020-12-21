@@ -82,8 +82,8 @@ public class ZigZagConversionTest {
     public void conversion_WhenNumberOfRowsIs5_ShouldReturn5RowPattern() {
         // Arrange
         String word = "PAYPALISHIRING";
-        String expectedConversionString = "PAASIYIRPLIGAN";
-        int numberOfRows = 1;
+        String expectedConversionString = "PHASIYIRPLIGAN";
+        int numberOfRows = 5;
 
         // Act
         String convertedString = ZigZagConversion.convert(word, numberOfRows);
