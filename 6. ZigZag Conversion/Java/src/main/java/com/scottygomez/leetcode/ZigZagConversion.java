@@ -21,10 +21,10 @@ public class ZigZagConversion {
             if (index < word.length()) {
                 // Start iterating through columns
                 int currentColumnNumber = 0;
-                
+
                 do {
                     if (currentRowNumber > 0 && index > numberOfColumns + numberOfColumns) {
-                        if (index - currentRowNumber < word.length()) {
+                        if (index - currentRowNumber < word.length() && currentRowNumber < numberOfRows - 1) {
                             stringBuilder.append(word.charAt(index - currentRowNumber));
                         }
                         if (index + currentRowNumber < word.length()) {
