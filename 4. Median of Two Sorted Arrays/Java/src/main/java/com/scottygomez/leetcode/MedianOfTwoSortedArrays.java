@@ -158,9 +158,9 @@ public class MedianOfTwoSortedArrays {
         return array;
     }
 
-    private static void printArray(int array[]) {
-        for (int i = 0; i < array.length; ++i)
-            System.out.print(array[i] + " ");
-        System.out.println();
-    }
+    // private static void printArray(int array[]) {
+    //     for (int i = 0; i < array.length; ++i)
+    //         System.out.print(array[i] + " ");
+    //     System.out.println();
+    // }
 }
