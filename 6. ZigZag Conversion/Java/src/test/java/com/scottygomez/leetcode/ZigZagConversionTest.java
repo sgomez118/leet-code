@@ -91,4 +91,18 @@ public class ZigZagConversionTest {
         // Assert
         assertEquals(expectedConversionString, convertedString);
     }
+
+    @Test
+    public void conversion_WhenNumberOfRowsIs6_ShouldReturn6RowPattern() {
+        // Arrange
+        String word = "PAYPALISHIRING";
+        String expectedConversionString = "PRAIIYHNPSGAIL";
+        int numberOfRows = 6;
+
+        // Act
+        String convertedString = ZigZagConversion.convert(word, numberOfRows);
+        
+        // Assert
+        assertEquals(expectedConversionString, convertedString);
+    }
 }
