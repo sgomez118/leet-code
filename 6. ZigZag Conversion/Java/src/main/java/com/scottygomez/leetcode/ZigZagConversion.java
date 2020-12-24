@@ -23,7 +23,7 @@ public class ZigZagConversion {
                 int currentColumnNumber = 0;
 
                 do {
-                    if (currentRowNumber > 0 && index > numberOfColumns + numberOfColumns) {
+                    if (currentRowNumber > 0 && index >= numberOfRows + numberOfColumns) {
                         if (index - currentRowNumber < word.length() && currentRowNumber < numberOfRows - 1) {
                             stringBuilder.append(word.charAt(index - currentRowNumber));
                         }
