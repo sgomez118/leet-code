@@ -14,6 +14,16 @@ public class ZigZagConversion {
         // "Columns" start to appear after 2 rows
         int numberOfColumns = numberOfRows - 2;
 
+        // Need to calculate last slot in the last column
+        int numberOfSlotsToCompleteColumn = numberOfRows - word.length() % (numberOfRows + numberOfColumns);
+
+        // If the number of slots to complete column between 0 and numberOfRows - 1 then use the natural last column
+        // given by the length of the string, else increase the last column number by 1
+        int lastColumnIndex = word.length();
+        if (0 > numberOfSlotsToCompleteColumn || numberOfSlotsToCompleteColumn >= numberOfRows) {
+            lastColumnIndex = (int) Math.ceil(word.length() / (double)(numberOfRows + numberOfColumns)) * (numberOfRows + numberOfColumns);
+        }
+
         for (int currentRowNumber = 0; currentRowNumber < numberOfRows; currentRowNumber++) {
             int index = currentRowNumber;
 
@@ -31,12 +41,14 @@ public class ZigZagConversion {
                             stringBuilder.append(word.charAt(index + currentRowNumber));
                         }
                     } else {
-                        stringBuilder.append(word.charAt(index));
+                        if (index < word.length()) {
+                            stringBuilder.append(word.charAt(index));
+                        }
                     }
                     
                     currentColumnNumber++;
                     index = (numberOfRows + numberOfColumns) * currentColumnNumber;
-                } while (index < word.length());
+                } while (index <= lastColumnIndex);
             }
         }
 
