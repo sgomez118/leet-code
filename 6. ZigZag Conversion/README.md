@@ -69,8 +69,8 @@ for rowNum in numRows:
   curCol = 0
   while index < length(s):
     if rowNum > 0 and index >= numRows + charCols:
-      s[index - i]
-      s[index + i]
+      s[index - rowNum]
+      s[index + rowNum]
     else:
       s[index]
     
