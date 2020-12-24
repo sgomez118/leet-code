@@ -105,4 +105,18 @@ public class ZigZagConversionTest {
         // Assert
         assertEquals(expectedConversionString, convertedString);
     }
+
+    @Test
+    public void conversion_WhenHardPillToSwallow_ShouldReturnConversion4() {
+        // Arrange
+        String word = "HardPilltoSwallow";
+        String expectedConversionString = "HlaailwlrPtSlwdoo";
+        int numberOfRows = 4;
+
+        // Act
+        String convertedString = ZigZagConversion.convert(word, numberOfRows);
+        
+        // Assert
+        assertEquals(expectedConversionString, convertedString);
+    }
 }
