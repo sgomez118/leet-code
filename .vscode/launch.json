@@ -2,6 +2,12 @@
     "configurations": [
         {
             "type": "java",
+            "name": "CodeLens (Launch) - ReverseInteger",
+            "request": "launch",
+            "mainClass": "com.scottygomez.leetcode.ReverseInteger"
+        },
+        {
+            "type": "java",
             "name": "CodeLens (Launch) - ZigZagConversion",
             "request": "launch",
             "mainClass": "com.scottygomez.leetcode.ZigZagConversion"
