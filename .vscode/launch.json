@@ -17,19 +17,12 @@
             "name": "CodeLens (Launch) - MedianOfTwoSortedArrays",
             "request": "launch",
             "mainClass": "com.scottygomez.leetcode.MedianOfTwoSortedArrays",
-            "projectName": "median-of-two-sorted-arrays"
-        },
-        {
-            "type": "java",
-            "name": "CodeLens (Launch) - MedianOfTwoSortedArrays",
-            "request": "launch",
-            "mainClass": "main.java.com.scottygomez.leetcode.MedianOfTwoSortedArrays"
         },
         {
             "type": "java",
             "name": "CodeLens (Launch) - LongestSubstringWithoutRepeatingCharacters",
             "request": "launch",
-            "mainClass": "main.java.com.scottygomez.leetcode.LongestSubstringWithoutRepeatingCharacters"
+            "mainClass": "com.scottygomez.leetcode.LongestSubstringWithoutRepeatingCharacters"
         },
         {
             "type": "java",
@@ -41,8 +34,7 @@
             "type": "java",
             "name": "CodeLens (Launch) - TwoSums",
             "request": "launch",
-            "mainClass": "com.scottygomez.leetcode.TwoSums",
-            "projectName": "two-sums"
+            "mainClass": "com.scottygomez.leetcode.TwoSums"
         }
     ]
 }
