@@ -2,6 +2,12 @@
     "configurations": [
         {
             "type": "java",
+            "name": "CodeLens (Launch) - StringToIntegerAtio",
+            "request": "launch",
+            "mainClass": "com.scottygomez.leetcode.StringToIntegerAtio"
+        },
+        {
+            "type": "java",
             "name": "CodeLens (Launch) - ReverseInteger",
             "request": "launch",
             "mainClass": "com.scottygomez.leetcode.ReverseInteger"
