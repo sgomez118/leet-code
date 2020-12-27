@@ -51,4 +51,28 @@ Explanation: The number "-91283472332" is out of the range of a 32-bit signed in
 * `s` consists of English letters (lower-case and upper-case), digits, `' '`, `'+'`, `'-'` and `'.'`.
 
 ## Solution
+Solving this problem is relatively easy mainly becuase the problem explanation is basically giving us the atoi algorithm to write. The only tricky part here is to put in the checks in the right location to break out early while iterating over the character array in our string. Since we only care about `' '`, `'+'`, `'-'`, and digits, these are the characters that we'll be focusing on during our character array inspection; anything else outside the range of this scope will automatically kick us out of the loop conditional. Additionally we will have to keep a check to make sure that we're not processing an integer that is larger than 32-bits, the moment we go larger than 32-bits we return the `MAX_INT` or `MIN_INT` values.
 ### Pseudo Code
+```
+for character in s
+  if character == ' '
+    if not isLeadingSpace:
+      break
+  elif character == '+' or character == '-':
+    if isLeadingSpace:
+      isNegative = character == '-' ? true : false
+      isLeadingSpace = false
+    else:
+      break
+  elif isDigit(character):
+    integerToReturn *= 10
+    integerToReturn += int(character)
+    if integerToReturn < -2**31 or integerToReturn > 2**31 - 1:
+      integerToReturn = isNegative ? -2**31 : 2**31 - 1
+      break
+  else:
+    break;
+
+integerToReturn = isNegative ? integerToReturn * -1 : integerToReturn
+return integerToReturn
+```
