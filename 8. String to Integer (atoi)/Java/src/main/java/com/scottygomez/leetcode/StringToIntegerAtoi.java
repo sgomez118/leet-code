@@ -19,8 +19,12 @@ public class StringToIntegerAtoi {
                     }
                     break;
                 case '+':
-                    isNegative = false;
-                    isLeadingSpace = false;
+                    if (isLeadingSpace) {
+                        isNegative = false;
+                        isLeadingSpace = false;
+                    } else {
+                        break out;
+                    }
                     break;
                 case '-':
                     if (isLeadingSpace) {
@@ -40,11 +44,16 @@ public class StringToIntegerAtoi {
                 case '7':
                 case '8':
                 case '9':
+                    if (integerToReturn * 10 < -2 << 30 || integerToReturn * 10 > 2 << 30 - 1) {
+                        integerToReturn = isNegative ? -2 << 30 : 2 << 30 -1;
+                        break out;
+                    }
                     integerToReturn *= 10;
                     integerToReturn += Integer.valueOf(String.valueOf(character));
                     isLeadingSpace = false;
-                default:
                     break;
+                default:
+                    break out;
             }
         }
 
