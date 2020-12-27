@@ -70,4 +70,17 @@ public class StringToIntegerAtoiTest {
         // Assert
         assertEquals(expected, actual);
     }
+
+    @Test
+    public void myAtoi_WhenStringContainsPlusInMiddle_ShouldReturnFirstSet() {
+        // Arrange
+        String str = "10+15";
+        int expected = 10;
+
+        // Act
+        int actual = new StringToIntegerAtoi().myAtoi(str);
+
+        // Assert
+        assertEquals(expected, actual);
+    }
 }
