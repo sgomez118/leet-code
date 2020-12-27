@@ -2,7 +2,7 @@ package com.scottygomez.leetcode;
 
 public class StringToIntegerAtoi {
     public int myAtoi(String s) {
-        int integerToReturn = 0;
+        long integerToReturn = 0;
 
         // Make sure string is not null and string is not empty
         if (s == null || s.trim().length() == 0) {
@@ -44,13 +44,13 @@ public class StringToIntegerAtoi {
                 case '7':
                 case '8':
                 case '9':
-                    if (integerToReturn * 10 < -2 << 30 || integerToReturn * 10 > 2 << 30 - 1) {
-                        integerToReturn = isNegative ? -2 << 30 : 2 << 30 -1;
-                        break out;
-                    }
                     integerToReturn *= 10;
                     integerToReturn += Integer.valueOf(String.valueOf(character));
                     isLeadingSpace = false;
+                    if (integerToReturn < -2 << 30 || integerToReturn > (2 << 30) - 1) {
+                        integerToReturn = isNegative ? -2 << 30 : (2 << 30) - 1;
+                        break out;
+                    }
                     break;
                 default:
                     break out;
@@ -60,6 +60,6 @@ public class StringToIntegerAtoi {
         // Put the sign back into place
         integerToReturn = isNegative ? integerToReturn * -1 : integerToReturn;
 
-        return integerToReturn;
+        return (int)integerToReturn;
     }
 }
