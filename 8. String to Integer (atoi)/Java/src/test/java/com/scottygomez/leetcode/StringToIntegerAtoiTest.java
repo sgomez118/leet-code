@@ -72,6 +72,19 @@ public class StringToIntegerAtoiTest {
     }
 
     @Test
+    public void myAtoi_WhenStringIsLargerThanPositive32Bits_ShouldReturnMaxInteger() {
+        // Arrange
+        String str = "21474836460";
+        int expected = (2 << 30) - 1;
+
+        // Act
+        int actual = new StringToIntegerAtoi().myAtoi(str);
+
+        // Assert
+        assertEquals(expected, actual);
+    }
+
+    @Test
     public void myAtoi_WhenStringContainsPlusInMiddle_ShouldReturnFirstSet() {
         // Arrange
         String str = "10+15";
