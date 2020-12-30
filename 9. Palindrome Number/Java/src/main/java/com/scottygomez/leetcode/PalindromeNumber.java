@@ -9,6 +9,11 @@ public class PalindromeNumber {
             return isPalindrome;
         }
 
+        // If length is 1 return true
+        if (x < 10) {
+            return true;
+        }
+
         // Use the logarithms to find out the "length" of the integer
         int length = (int) (Math.log10(x) + 1);
         int[] integerArray = new int[length/2];
