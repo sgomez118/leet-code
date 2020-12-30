@@ -2,6 +2,12 @@
     "configurations": [
         {
             "type": "java",
+            "name": "CodeLens (Launch) - RegularExpressionMatching",
+            "request": "launch",
+            "mainClass": "com.scottygomez.leetcode.RegularExpressionMatching"
+        },
+        {
+            "type": "java",
             "name": "CodeLens (Launch) - PalindromeNumber",
             "request": "launch",
             "mainClass": "com.scottygomez.leetcode.PalindromeNumber"
