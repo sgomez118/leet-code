@@ -2,6 +2,12 @@
     "configurations": [
         {
             "type": "java",
+            "name": "CodeLens (Launch) - PalindromeNumber",
+            "request": "launch",
+            "mainClass": "com.scottygomez.leetcode.PalindromeNumber"
+        },
+        {
+            "type": "java",
             "name": "CodeLens (Launch) - StringToIntegerAtio",
             "request": "launch",
             "mainClass": "com.scottygomez.leetcode.StringToIntegerAtio"
