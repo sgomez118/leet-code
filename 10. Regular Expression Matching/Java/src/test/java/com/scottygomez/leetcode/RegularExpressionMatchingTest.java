@@ -81,7 +81,7 @@ public class RegularExpressionMatchingTest {
     @ValueSource(strings = {"mississppi", "mississppa", "mississi", "mississ", "missis", "missia", "misis", "miix"})
     public void isMatch_WhenPatternIsMISStarISStarPStarPeriodAndStringMatchesPattern_ShouldReturnTrue(String s) {
         // Arrange
-        String p = "mi*is*p*i";
+        String p = "mis*is*p*.";
         boolean expected = true;
 
         // Act
