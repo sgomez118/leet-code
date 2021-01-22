@@ -162,11 +162,11 @@ public class RegularExpressionMatchingTest {
     }
 
     @Test
-    public void isMatch_WhenStringDoesNotMatchePatternAndPatternHasPeriodStarAndMore_ShouldReturnFalse() {
+    public void isMatch_WhenStringDoesNotMatchPatternAndPatternHasPeriodStarInFront_ShouldReturnFalse() {
         // Arrange
         String s = "clurkbccddeeeddccbbd";
         String p = ".*a*bb*ccc*ddd*eeee*ddd*ccc*bb";
-        boolean expected = true;
+        boolean expected = false;
 
         // Act
         boolean actual = new RegularExpressionMatching().isMatch(s, p);
