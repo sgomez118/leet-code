@@ -2,6 +2,12 @@
     "configurations": [
         {
             "type": "java",
+            "name": "CodeLens (Launch) - ContainerWithMostWater",
+            "request": "launch",
+            "mainClass": "com.scottygomez.leetcode.ContainerWithMostWater"
+        },
+        {
+            "type": "java",
             "name": "CodeLens (Launch) - RegularExpressionMatching",
             "request": "launch",
             "mainClass": "com.scottygomez.leetcode.RegularExpressionMatching"
