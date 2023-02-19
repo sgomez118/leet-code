@@ -47,4 +47,5 @@ Output: false
 
 
 ## Solution
+This solution again is taken from the internet where we can narrow down the solution to 2 use cases. Use case 1: The pattern has a `'*'`. Use case 2: The pattern does not have a `'*'` pattern.
 ### Pseudo Code
